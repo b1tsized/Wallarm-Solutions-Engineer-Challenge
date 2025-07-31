@@ -17,7 +17,7 @@ I've chosen to use the [Wallarm Ingress Controller](https://docs.wallarm.com/adm
     
     </div>
 
-2. I was able to install fairly easily. Below is an ouput of the logs.
+2. I was able to install fairly easily. Below is an ouput of the logs. You can also review my [`values.yaml`](/helm_files/values.yaml).
 
     ```bash
     # jturner at prometheus.attlocal.net in ~/Documents/github.com [0:11:34]
@@ -140,7 +140,7 @@ I've chosen to use the [Wallarm Ingress Controller](https://docs.wallarm.com/adm
     wallarm-wallarm-ingress-controller   LoadBalancer   172.20.5.208   ac549b596e3a34ee6acbbd7550513eb5-2138899269.us-east-1.elb.amazonaws.com   80:32090/TCP,443:32562/TCP   2m58s   app.kubernetes.io/component=controller,app.kubernetes.io/instance=wallarm,app.kubernetes.io/name=wallarm-ingress
     ```
 
-3. After the controller was set up I read the output about the ingress and was able to apply one. You can find the file [here](ingress.yaml). I was able to run the following.
+3. After the controller was set up I read the output about the ingress and was able to apply one. You can find the file [here](/helm_files/ingress.yaml). I was able to run the following.
 
     ```bash
     kubectl apply -f ingress.yaml -n wallarm
