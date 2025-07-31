@@ -1,0 +1,5 @@
+controller:
+  wallarm:
+    enabled: "true"
+    token: '{{api.token}}'
+    apiHost: "us1.api.wallarm.com"

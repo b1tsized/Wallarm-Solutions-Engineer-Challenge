@@ -1,0 +1,19 @@
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: wallarm-ingress
+  namespace: wallarm
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: test.b1tsized.tech
+      http:
+        paths:
+          - pathType: Prefix
+            backend:
+              service:
+                name: httpbin
+                port:
+                  number: 8080
+            path: /
